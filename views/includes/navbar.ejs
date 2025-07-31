@@ -1,5 +1,7 @@
 <style>
   .search-btn {
+    position: relative;
+    right: -3rem;
     background-color: #f90c1c;
     color: #fff;
     border-radius: 25px;
@@ -11,8 +13,14 @@
   .search-btn i {
     display: inline;
     padding-left: .5rem;
+     transition: transform 0.3s ease-in;
+  }
+  .search-btn:hover {
+    transform: scale(1.1);
   }
   .search-inp {
+    position: relative;
+    right: -2rem;
     border-radius: 25px;
     padding: .5rem 3rem .5rem 3rem
   }
@@ -21,10 +29,39 @@
 }
 
 .navbar.scrolled {
-  backdrop-filter: blur(8px);  /* blur background */
-  background-color: rgba(255, 255, 255, 0.7) !important; /* semi-transparent white */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  backdrop-filter: blur(8px);  
+  background-color: rgba(255, 255, 255, 0.7) !important; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
 }
+
+.navbar-brand .fa-compass {
+  display: inline-block;
+  animation: rotatePause 2s linear infinite;
+}
+
+@keyframes rotatePause {
+  0% { transform: rotate(0deg); }
+  40% { transform: rotate(360deg); } /* fast spin */
+  70% { transform: rotate(360deg); } /* pause for 0.4s (approx) */
+  100% { transform: rotate(720deg); } /* next fast spin */
+}
+
+.navbar-nav .nav-link.logout-link {
+  border: 2px solid #f90c1c;  /* outline color */
+  border-radius: 20px;
+  padding: 6px 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* subtle shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link.logout-link:hover {
+  background-color: #f90c1c;
+  color: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* deeper shadow on hover */
+}
+
+
+
 
 </style>
 
@@ -36,7 +73,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link" href="/listings"><b style="font-weight: 500;">Explore</b></a>
       </div>
 
       <form class="navbar-nav ms-auto" role="search">
@@ -47,13 +84,13 @@
       </form>
       
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new">Add new listings</a>
+        <a class="nav-link" href="/listings/new"><i style="font-family:Poppins; margin-right: 1rem;">Create new listing</i></a>
         <% if(!curruser) {%>
-          <a class="nav-link " aria-current="page" href="/signup"><b>Sign in</b></a>
-          <a class="nav-link" href="/login"><b>Login</b></a>
+          <a class="nav-link " aria-current="page" style="font-family: Roboto;" href="/signup"><b>Sign in</b></a>
+          <a class="nav-link" style="font-family: Roboto;" href="/login"><b>Login</b></a>
           <%}%>
             <%if(curruser) {%>
-              <a class="nav-link" href="/logout">Logout</a>
+              <a class="nav-link logout-link" href="/logout">Logout</a>
               <%}%>
 
       </div>

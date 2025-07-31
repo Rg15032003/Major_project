@@ -18,11 +18,12 @@
     }
     .signup-title {
         text-align: center;
-        font-weight: 600;
+        font-weight: 400;
         margin-bottom: 1.5rem;
         color: #000000;
         font-size: 1.8rem;
         letter-spacing: 0.5px;
+
     }
     .form-label {
         font-weight: 500;
@@ -43,6 +44,7 @@
         border-radius: 8px;
         font-size: 1rem;
         padding: 0.6rem;
+        color: black;
     }
     .extra-links {
         text-align: center;
@@ -63,7 +65,7 @@
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="signup-card">
-                <h1 class="signup-title">Signup on Wanderlust</h1>
+                <h1 class="signup-title" >Signup on Wanderlust</h1>
                 <form action="/signup" method="post" class="needs-validation" novalidate>
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
@@ -83,10 +85,10 @@
                         <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Please enter a password.</div>
                     </div>
-                    <button class="btn btn-outline-primary btn-signup">Sign Up</button>
+                    <button class="btn btn-outline-dark btn-signup">Sign Up</button>
                 </form>
                 <div class="extra-links">
-                    Already have an account? <a href="/login">Login</a>
+                    Already have an account? <a style="text-decoration: underline;" href="/login">Login</a>
                 </div>
             </div>
         </div>

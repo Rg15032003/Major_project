@@ -8,6 +8,7 @@
     margin-top: 2rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     font-family: 'Poppins', sans-serif;
+
   }
 
   .create-listing h3 {
@@ -35,7 +36,7 @@
     outline: none;
   }
 
-  .create-listing .btn-dark {
+  .create-listing .btn-outline-dark {
     width: 100%;
     padding: 0.7rem;
     border-radius: 8px;
@@ -43,16 +44,15 @@
     transition: all 0.3s ease;
   }
   .create-listing .btn-dark:hover {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    
     transform: translateY(-2px);
   }
 </style>
 
 <div class="row create-listing">
-  <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+  <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">
     <div class="form-container">
-      <h3>Create a New Listing</h3>
+      <h3 style="font-weight: 400;">Create a New Listing</h3>
       <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
@@ -93,7 +93,7 @@
           <div class="invalid-feedback">Check Country</div>
         </div>
 
-        <button class="btn btn-dark mt-3">Add</button>
+        <button class="btn btn-outline-dark mt-3">Add</button>
       </form>
     </div>
   </div>
