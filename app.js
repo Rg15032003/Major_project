@@ -112,7 +112,7 @@ app.use("/",user);
 // });
 app.get("/", async (req, res, next) => {
     try {
-        const allListings = await Listing.find({});
+        const alllistings = await Listing.find({});
         res.render("listings/index.ejs", { alllistings });
     } catch (err) {
         next(err);
