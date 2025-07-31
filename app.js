@@ -109,6 +109,14 @@ app.use("/",user);
 // app.get("/", (req,res)=>{
 //     res.redirect("/listings"); 
 // });
+app.get("/", async (req, res, next) => {
+    try {
+        const allListings = await Listing.find({});
+        res.render("listings/index.ejs", { allListings });
+    } catch (err) {
+        next(err);
+    }
+});
 
 app.all(/.*/,(req, res, next) => {
     next(new Expresserror(404, "page not found!"));
