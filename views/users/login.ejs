@@ -1,0 +1,78 @@
+<%layout("/layouts/boilerplate.ejs")%>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Poppins', sans-serif; /* Updated font */
+    }
+    .login-card {
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .login-title {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #000000;
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+    }
+    .form-label {
+        font-weight: 500;
+        color: #212529;
+        font-size: 0.95rem;
+    }
+    .form-control {
+        border-radius: 8px;
+        font-size: 0.95rem;
+    }
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 5px rgba(13,110,253,0.3);
+    }
+    .btn-login {
+        width: 100%;
+        font-weight: 600;
+        border-radius: 8px;
+        font-size: 1rem;
+        padding: 0.6rem;
+        margin-top: 2rem;
+    }
+    .extra-links {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    .extra-links a {
+        text-decoration: none;
+        color: #0d6efd;
+        transition: color 0.2s;
+    }
+    .extra-links a:hover {
+        color: #0a58ca;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="login-card">
+                <h1 class="login-title">Login on Wanderlust</h1>
+                <form action="/login" method="post" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input required id="username" name="username" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input required id="password" name="password" type="password" class="form-control">
+                    </div>
+                    <button class="btn btn-outline-primary btn-login">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
