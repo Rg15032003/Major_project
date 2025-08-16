@@ -8,11 +8,7 @@ This project showcases animations, responsive design, and component-based archit
 ## 🚀 Features
 
 - ⚡ Fast & responsive React frontend
-- 🎨 Styled with Tailwind CSS utility classes
-- 🎥 Smooth animations using Framer Motion
-- 🔗 Social media integration via React Icons
 - 📱 Mobile-first responsive design
-- 🌓 Light/Dark mode ready (extendable)
 
 ---
 
@@ -37,31 +33,19 @@ Major_project/
 
 Follow these steps to run the project locally:
 
-### 1️⃣ Clone the repository
-```bash
+1️⃣ Clone the repository
 git clone https://github.com/Rg15032003/Major_project.git
 cd Major_project
  Install dependencies
-bash
-Copy
-Edit
-npm install
+Run `npm install`
+
 3️⃣ Start the development server
-bash
-Copy
-Edit
 npm start
 The app will be available at:
 👉 http://localhost:3000
 
 🧩 Technologies Used
 React — Frontend framework
-
-Tailwind CSS — Utility-first CSS framework
-
-Framer Motion — Animation library
-
-React Icons — Icon library
 
 Vite / CRA — Development server (whichever you used)
 
