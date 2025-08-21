@@ -43,7 +43,7 @@ access the app at =>localhost:8080/listings
 
 Listing screenshots
 <img width="832" height="858" alt="Screenshot 2025-08-21 233827" src="https://github.com/user-attachments/assets/d8ffbcf3-84da-4de6-8511-c2e7d82f23cc" />
-<img width="991" height="766" alt="Screenshot 2025-08-21 233856" src="https://github.com/user-attachments/assets/cb314bac-4661-4e2e-8eb1-6214c0e82715" />
+<img width="932" height="763" alt="Screenshot 2025-08-21 234116" src="https://github.com/user-attachments/assets/e89b0993-9a31-4811-8b8f-c4b8df667f2a" />
 
 📖 Usage
 
