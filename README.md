@@ -1,102 +1,61 @@
-# Major Project
+🌍 Wanderlust
 
-A modern portfolio-style web application built using **React**, **Tailwind CSS**, **Framer Motion**, and **React Icons**.  
-This project showcases animations, responsive design, and component-based architecture.
+🚀 Overview
+Wanderlust is a full-stack travel exploration platform where users can create, browse, search, and review location-based listings.
+It integrates interactive maps, secure authentication, and optimized image hosting, making it a community-driven platform for discovering travel destinations.
 
----
+✨ Features
+🏡 Listings – Create, browse, and search over 100+ travel destinations.
+📝 Reviews – Add and manage user reviews for listings.
+🗺️ Interactive Maps – Mapbox API integration for geolocation-based search.
+📸 Image Hosting – Cloudinary integration for fast and optimized image loading.
+🔐 Authentication – Role-based authentication using Passport.js (User, Moderator, Admin).
+⚡ Responsive UI – Built with EJS templates and Bootstrap for smooth UX.
 
-## 🚀 Features
-
-- ⚡ Fast & responsive React frontend
-- 📱 Mobile-first responsive design
-
----
-
-## 📂 Project Structure
-Major_project/
-│── src/
-│ ├── components/
-│ │ └── Header.jsx
-│ ├── App.jsx
-│ ├── index.js
-│ └── index.css
-│── public/
-│── package.json
-│── tailwind.config.js
-│── postcss.config.js
-│── README.md
+🛠️ Tech Stack
+Node.js, Express.js, MongoDB Atlas, EJS, Passport.js, Mapbox API, Cloudinary,Joi Scehma
 
 
----
-
-## 🛠️ Installation & Setup
-
-Follow these steps to run the project locally:
-
+📦 Installation & Setup
 1️⃣ Clone the repository
-git clone https://github.com/Rg15032003/Major_project.git
-cd Major_project
- Install dependencies
-Run `npm install`
+git clone https://github.com/rg15032003/wanderlust.git
+cd wanderlust
 
-3️⃣ Start the development server
-npm start
-The app will be available at:
-👉 http://localhost:3000
+2️⃣ Install dependencies
+npm install
 
-🧩 Technologies Used
-React — Frontend framework
+3️⃣ Setup Environment Variables
 
-Vite / CRA — Development server (whichever you used)
+Create a .env file in the root directory:
 
-📦 Available Scripts
-Inside the project folder, you can run:
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_KEY=your_cloud_key
+CLOUDINARY_SECRET=your_cloud_secret
+MAPBOX_TOKEN=your_mapbox_api_token
+SESSION_SECRET=your_secret
 
-npm start → Runs the app in development mode
+4️⃣ Run the application
+# nodemon app.js
+access the app at =>localhost:8080/listings
+<img width="1913" height="951" alt="Screenshot 2025-08-21 233555" src="https://github.com/user-attachments/assets/9855cbb5-f571-46e1-a704-46bb461982e6" />
 
-npm run build → Builds the app for production
+Listing screenshots
+<img width="832" height="858" alt="Screenshot 2025-08-21 233827" src="https://github.com/user-attachments/assets/d8ffbcf3-84da-4de6-8511-c2e7d82f23cc" />
+<img width="991" height="766" alt="Screenshot 2025-08-21 233856" src="https://github.com/user-attachments/assets/cb314bac-4661-4e2e-8eb1-6214c0e82715" />
 
-npm run lint → Runs linting checks (if configured)
+📖 Usage
 
-npm test → Launches the test runner
+Sign Up / Login to your account.
+Browse Listings or create your own travel spot.
+Upload Images (stored via Cloudinary).
+View on Map with Mapbox integration.
+Leave Reviews and interact with other travelers.
 
-🎯 Usage
-Modify the navigation links in Header.jsx
-
-Add your brand name / logo in the Header component
-
-Customize the gradient colors in Tailwind config
-
-Add more pages and routes as your project grows
-
-🤝 Contributing
-Contributions are welcome!
-To contribute:
-
-Fork the repository
-
-Create a new branch (git checkout -b feature-branch)
-
-Commit your changes (git commit -m "Add feature")
-
-Push to your branch (git push origin feature-branch)
-
-Create a Pull Request
-
-📜 License
-This project is licensed under the MIT License.
-You are free to use, modify, and distribute this software with attribution.
-
-
----
-
-### ✅ Next Step
-1. Create a `README.md` in your repo root.
-2. Paste this content.
-3. Commit & push:
-
-```bash
-git add README.md
-git commit -m "Add detailed README"
-git push origin main
-
+🤝 To contribute
+Fork the repo
+Create your feature branch (git checkout -b feature-name)
+Commit your changes (git commit -m 'Add feature')
+Push to the branch (git push origin feature-name)
+Open a Pull Request
