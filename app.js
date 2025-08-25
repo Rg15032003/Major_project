@@ -69,13 +69,11 @@ const sessionoptions={
     }
 }
 
-
-
 app.use(session (sessionoptions)); //middlewares
 app.use(flash());
 
-app.use(passport.initialize());
-app.use(passport.session());  
+app.use(passport.initialize()); //initialises passport
+app.use(passport.session()); //user identification from page to page
 passport.use(new localStratergy(User.authenticate()));
 
 passport.serializeUser(User.serializeUser());
@@ -86,6 +84,7 @@ app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
     res.locals.error=req.flash("error");
     res.locals.curruser=req.user;
+    console.log(req.user);
     next();
 })
 

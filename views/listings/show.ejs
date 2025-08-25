@@ -2,6 +2,7 @@
     <script>
         const mapToken = "<%=process.env.MAP_TOKEN%>";
         const coordinates =<%-JSON.stringify(listing.geometry.coordinates) %>;
+        const listingTitle = "<%= listing.title %>";
     </script>
     <style>
         .card-text {
@@ -42,7 +43,7 @@
         <img src="<%= listing.image.url%>" class="card-img-top show-img" style="max-height:270px" alt="listing_image" />
         <div class="card-body ps-2">
             <p class="card-text"><b><i>
-                       owned by <%=listing.owner.username%>
+                       Owned by <%=listing.owner.username%>
                     </i></b></p>
             <p>
                 <%= listing.description %>

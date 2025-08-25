@@ -12,7 +12,7 @@ router.route("/")
 .get( wrapAsync(Listingcontroller.index))
 .post(
   isLogged,
-  upload.single('listing[image]'),
+  upload.single('listing[image]'), //to upload single image in the backend through multer
   validatelisting,
   wrapAsync(Listingcontroller.createlist));
 

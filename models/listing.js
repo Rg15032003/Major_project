@@ -36,7 +36,7 @@ const listingSchema=new mongoose.Schema({
   }
 });
 
-listingSchema.post("findOneAndDelete",async(listing)=>{
+listingSchema.post("findOneAndDelete",async(listing)=>{  //Middleware hook: when a listing is deleted, its associated reviews are also removed.
     await Review.deleteMany({reviews :{$in : listing.reviews}});
     
 })

@@ -1,4 +1,4 @@
-const Joi =require('joi');
+const Joi =require('joi'); //provides validation for individual fields 
 
 module.exports.listingSchema=Joi.object({
     listing:Joi.object({

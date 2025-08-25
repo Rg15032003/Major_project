@@ -30,7 +30,7 @@ module.exports.showlist=async (req, res) => {
     res.render("./listings/show.ejs", { listing });
 }
 
-module.exports.createlist=async (req, res, next) => {
+module.exports.createlist=async (req, res, next) => { //req contains file info such as filepath , filename
   let response=await geocodingClient.forwardGeocode({
   query: req.body.listing.location,
   limit: 1,
@@ -39,8 +39,8 @@ module.exports.createlist=async (req, res, next) => {
   let url=req.file.path;
   let filename=req.file.filename;
     const newListing = new Listing(req.body.listing);
-    newListing.owner = req.user._id;
-    newListing.image={url,filename};
+    newListing.owner = req.user._id; //by default passport contains user info and has an id attached to it.
+    newListing.image={url,filename}; //provided by cloudinary
 
     newListing.geometry=response.body.features[0].geometry
     let savedListing=await newListing.save();
