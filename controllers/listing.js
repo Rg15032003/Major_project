@@ -4,13 +4,28 @@ const mapToken=process.env.MAP_TOKEN;
 const geocodingClient=mbxGeocoding({accessToken: mapToken});
 
 module.exports.index=async (req, res) => {
-    let alllistings = await Listing.find();
-    res.render("./listings/index.ejs", { alllistings });
-  };
+    let query = req.query.query || "";
+  let alllistings;
 
-module.exports.rendernewform=(req, res) => {
-  res.render("listings/new.ejs");
+  if (query) {
+    alllistings = await Listing.find({
+      $or: [
+        { title: { $regex: query, $options: "i" } },
+        { description: { $regex: query, $options: "i" } },
+        { location: { $regex: query, $options: "i" } }
+      ]
+    });
+  } else {
+    alllistings = await Listing.find();
+  }
+
+  res.render("./listings/index.ejs", { alllistings, searchQuery: query });
 }
+
+module.exports.rendernewform = (req, res) => {
+  res.render("listings/new.ejs");
+};
+
 
 module.exports.showlist=async (req, res) => {
     let { id } = req.params;
@@ -77,7 +92,7 @@ module.exports.updatelist=async (req, res) => {
 
   module.exports.deletelist=async (req, res) => {
       let { id } = req.params;
-      let deletedLisitng = await Listing.findByIdAndDelete(id);
+      let deletedListing = await Listing.findByIdAndDelete(id);
       req.flash("success", "listing deleted!");
       res.redirect("/listings");
     }

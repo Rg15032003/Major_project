@@ -22,7 +22,9 @@
     position: relative;
     right: -2rem;
     border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: .5rem 3rem .5rem 3rem
+    
   }
   .navbar {
   transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
@@ -73,18 +75,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="/listings"><b style="font-weight: 500;">Explore</b></a>
+        <a class="nav-link" href="/listings"><b style="font-weight: 500;">UpStay</b></a>
       </div>
 
-      <form class="navbar-nav ms-auto" role="search">
-        <input id="searchInput" class="form-control me-2 search-inp" type="search" placeholder="" />
+      <form class="navbar-nav ms-auto" role="search" action="/listings" method="GET">
+        <input id="searchInput" class="form-control me-2 search-inp" name="query"  value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>"type="search" placeholder="" />
         <button class="btn search-btn" type="submit">
           Search<i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
       
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new"><i style="font-family:Poppins; margin-right: 1rem;">Create new listing</i></a>
+        <a class="nav-link" href="/listings/new">List Your Place</a>
         <% if(!curruser) {%>
           <a class="nav-link " aria-current="page" style="font-family: Roboto;" href="/signup"><b>Sign in</b></a>
           <a class="nav-link" style="font-family: Roboto;" href="/login"><b>Login</b></a>

@@ -20,8 +20,7 @@ router.get("/new", isLogged, Listingcontroller.rendernewform);
 
 //show route
 router.route("/:id")
-.get(
-  wrapAsync(Listingcontroller.showlist))
+.get(wrapAsync(Listingcontroller.showlist))
 .put(
   isLogged,
   isOwner,
