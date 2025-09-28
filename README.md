@@ -1,7 +1,7 @@
-🌍 Wanderlust
+🌍 UpStay
 
 🚀 Overview
-Wanderlust is a full-stack travel exploration platform where users can create, browse, search, and review location-based listings.
+UpStay is a full-stack travel exploration platform where users can create, browse, search, and review location-based listings.
 It integrates interactive maps, secure authentication, and optimized image hosting, making it a community-driven platform for discovering travel destinations.
 
 ✨ Features
